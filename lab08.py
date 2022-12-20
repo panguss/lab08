@@ -17,8 +17,8 @@ while True:
         logging.info('correct number')
         break
 list = [i for i in range(1, a + 1)]
-while list:
-    num = random.choice(list)
-    while num in list:
-        list.remove(num)
-    print(num, end=" ")
+random.shuffle(list)
+print('Чтобы вывести число, необходимо нажать Enter', end='')
+for e in list:
+    v = input()
+    print(e, end='')
